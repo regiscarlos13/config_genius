@@ -1,0 +1,5 @@
+<%% @card_title = @records.model_name.human(count: 2) %>
+<%% @btn_new = btn_new(new_<%= singular_table_name %>_path) %>
+  
+  <%%= search(@columns) %>
+  <%%= table_for(table: @records, columns: @columns, pagination: ) %>

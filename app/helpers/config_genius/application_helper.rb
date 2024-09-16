@@ -1,7 +1,12 @@
+# frozen_string_literal: true
+
 module ConfigGenius
   module ApplicationHelper
-    def regis
-      tag.h1 'REGIS CARLOS VIEIRA DO NASCIMENTO'
-    end
+    include BtnHelper
+    include TableHelper
+    include MessageHelper
+    include SearchHelper
+    include PaginationHelper
+    include Pagy::Frontend
   end
 end

@@ -1,8 +1,24 @@
-# ConfigGenius
-Short description and motivation.
+## ConfigGenius
+  # assets
+    Bootstrap.
+    button
+    select2
+  # helpes
+    btn
+    message
+    pagination
+    search
+    table
 
 ## Usage
-How to use my plugin.
+  app/assets/config/manifest.js
+    //= link config_genius/application.css
+  app/views/layouts/application.html.erb
+      <%= stylesheet_link_tag "config_genius/application" %>
+  app/controllers/application_controller.rb
+    include PagyConcern
+  app/helpers/application_helper.rb
+    include ConfigGenius::ApplicationHelper
 
 ## Installation
 Add this line to your application's Gemfile:
