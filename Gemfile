@@ -10,6 +10,7 @@ gem 'pg'
 gem 'puma'
 gem 'ransack'
 gem 'sprockets-rails'
+gem 'simple_form'
 
 # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
 gem 'rubocop-rails-omakase', require: false
