@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    config_genius (0.1.0)
+    config_genius (0.1.1)
       pagy
       rails (>= 7.0.0)
       ransack
