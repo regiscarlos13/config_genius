@@ -27,6 +27,12 @@
   
   # app/helpers/application_helper.rb
     include ConfigGenius::ApplicationHelper
+  
+  # config/importmap.rb
+    pin_all_from "#{Gem.loaded_specs['config_genius'].full_gem_path}/app/assets/javascripts/config_genius"
+  # config/initializers/assets.rb
+    Rails.application.config.assets.paths << "#{Gem.loaded_specs['config_genius'].full_gem_path}/app/assets/javascripts/config_genius"
+
 
 ## Installation
 Add this line to your application's Gemfile:
