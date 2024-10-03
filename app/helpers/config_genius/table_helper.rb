@@ -7,7 +7,7 @@ module ConfigGenius
         concat(tag.div(class: 'table-responsive') do
           concat(tag.table(class: 'table  table-striped table-hover table-bordered table-sm') do
             concat(thead(columns, button))
-            concat(tbody(table))
+            concat(tbody(table, partial))
           end)
         end)
         concat(pagination)
