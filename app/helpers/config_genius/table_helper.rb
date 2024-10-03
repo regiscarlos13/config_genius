@@ -2,7 +2,7 @@
 
 module ConfigGenius
   module TableHelper
-    def table_for(table:, columns:, pagination:, button: true)
+    def table_for(table:, columns:, pagination:, partial: nil, button: true)
       turbo_frame_tag :results, data: { turbo_action: 'search' } do
         concat(tag.div(class: 'table-responsive') do
           concat(tag.table(class: 'table  table-striped table-hover table-bordered table-sm') do
@@ -26,9 +26,11 @@ module ConfigGenius
       end
     end
 
-    def tbody(table)
+    def tbody(table, partial)
+      partial_user = partial.nil? ? table.name.underscore : partial
+
       tag.tbody id: "#{table.table.name}_table" do
-        render partial: table.name.underscore, collection: table, cached: true
+        render partial: partial_user, collection: table, cached: true
       end
     end
   end
