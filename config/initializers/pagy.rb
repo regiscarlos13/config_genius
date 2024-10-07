@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'pagy'
+require 'pagy/extras/i18n'
 require 'pagy/extras/bootstrap'
 require 'pagy/extras/overflow'
 require 'pagy/extras/countless'
